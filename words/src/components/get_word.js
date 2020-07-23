@@ -1,19 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import axios from "axios";
 
-export default class Words extends React.Component {
+export default class ListOfWords extends React.Component {
   state = {
-    words: [],
+    words: []
   };
 
   componentDidMount() {
     axios.get("https://aliases.herokuapp.com/api/words").then((res) => {
-      const words = res.data;
+      const words = res.data.data;
       this.setState({ words });
     });
-  }
+  };
 
   render() {
-    return this.state.words.map((word) => <div>{word.description}</div>);
-  }
+    return <></>;
+  };
 }

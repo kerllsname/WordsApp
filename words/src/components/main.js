@@ -1,10 +1,12 @@
 import React from "react";
-import Words from "./get_word";
+import ListOfWords from "./get_word";
+import RandWord from "./get_random_words";
 
 function App() {
   return (
     <div>
-      <Words />
+      <ListOfWords />
+      <RandWord />
     </div>
   );
 }
